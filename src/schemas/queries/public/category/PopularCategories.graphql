@@ -1,0 +1,10 @@
+query PopularCategories($query: QueryCategoryInput!) {
+	categories(query: $query) {
+		categories {
+			name
+			slug
+			bigImagePath
+		}
+		count
+	}
+}

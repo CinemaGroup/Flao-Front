@@ -1,0 +1,88 @@
+.heading {
+	@apply font-extrabold mb-8;
+}
+.list {
+	@apply flex flex-wrap gap-y-7;
+	column-gap: 22px;
+}
+.product {
+	max-width: calc(20% - 18px);
+
+	> div:first-child {
+		aspect-ratio: 2.7 / 3;
+	}
+}
+.add {
+	max-width: calc(40% - 12px);
+}
+.secondAdd {
+	@apply hidden;
+}
+
+@media (max-width: 1400px) {
+	.heading {
+		@apply mb-7;
+	}
+}
+
+@media (max-width: 1200px) {
+	.product {
+		max-width: calc(25% - 17px);
+	}
+	.add {
+		max-width: calc(50% - 10px);
+	}
+}
+
+@media (max-width: 1100px) {
+	.list {
+		@apply flex flex-wrap gap-y-5 gap-x-4;
+	}
+	.product {
+		max-width: calc(25% - 12px);
+	}
+	.add {
+		max-width: calc(50% - 8px);
+	}
+}
+
+@media (max-width: 800px) {
+	.secondAdd {
+		@apply block;
+	}
+	.heading {
+		@apply mb-5;
+	}
+	.list {
+		@apply gap-y-3 gap-x-3;
+	}
+	.product,
+	.add {
+		max-width: calc(50% - 8px);
+	}
+	.add {
+		@apply aspect-square;
+	}
+	.product {
+		> div:first-child {
+			min-width: 140px;
+			max-width: 140px;
+		}
+
+		> div:last-child {
+			@apply py-3 px-3;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.product {
+		@apply max-w-full;
+	}
+}
+
+@media (max-width: 440px) {
+	.heading {
+		@apply mb-4;
+	}
+}

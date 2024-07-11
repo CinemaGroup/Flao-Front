@@ -1,0 +1,121 @@
+.provider {
+	@apply w-full aspect-square bg-gray-100 rounded-xl;
+
+	&:hover .button {
+		@apply btn-green;
+	}
+}
+.link {
+	@apply w-full h-full px-4 py-6 flex flex-col justify-between;
+}
+.top {
+	@apply flex flex-col items-end gap-1.5;
+}
+.category,
+.rating {
+	@apply text-small font-medium;
+}
+.category {
+	@apply px-3 py-0.5 rounded-full bg-white ellipse-text max-w-full;
+}
+.rating {
+	@apply flex items-center gap-1.5;
+
+	> svg {
+		@apply fill-orange-base stroke-orange-base w-5 h-5;
+	}
+}
+.count {
+	@apply pl-1.5 relative;
+
+	&::before {
+		@apply absolute top-0 bottom-0 my-auto rounded-full bg-gray-base;
+		left: 1px;
+		content: '';
+		width: 2px;
+		height: 2px;
+	}
+}
+.preview {
+	@apply py-4 mx-auto w-full flex items-center justify-center;
+	max-width: 100%;
+	max-height: 120px;
+
+	> img {
+		@apply max-h-full;
+	}
+}
+.button {
+	@apply w-full uppercase bg-gray-900 text-white mx-auto rounded-full px-4 text-medium-lg text-center transition-colors;
+	max-height: 42px;
+	min-height: 42px;
+	line-height: 42px;
+	max-width: 190px;
+}
+
+@media (max-width: 1300px) {
+	.button {
+		font-size: 11px;
+		min-height: 35px;
+		max-height: 35px;
+		line-height: 35px;
+	}
+	.preview {
+		@apply py-3;
+		max-width: 130px;
+		max-height: 87px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.provider {
+		min-height: 215px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.preview {
+		max-width: 95px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.provider {
+		min-height: 165px;
+	}
+	.preview {
+		max-width: 84px;
+		max-height: 70px;
+	}
+	.link {
+		@apply px-3 py-3.5;
+	}
+	.button {
+		min-height: 28px;
+		max-height: 28px;
+		line-height: 28px;
+	}
+}
+
+@media (max-width: 900px) {
+	.rating {
+		@apply gap-1;
+
+		> svg {
+			@apply w-4 h-4;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.provider {
+		max-width: 137px;
+		min-width: 137px;
+	}
+}
+
+@media (max-width: 550px) {
+	.button {
+		font-size: 10px;
+	}
+}

@@ -1,0 +1,59 @@
+.heading {
+	@apply font-extrabold mb-8;
+}
+.list {
+	@apply flex;
+	gap: 22px;
+}
+.provider {
+	max-width: calc(20% - 18px);
+}
+.more {
+	@apply btn-green block mx-auto rounded-full py-3 px-12 text-small text-white font-semibold;
+	margin-top: 22px;
+}
+
+@media (max-width: 1400px) {
+	.heading {
+		@apply mb-7;
+	}
+}
+
+@media (max-width: 1200px) {
+	.list {
+		@apply gap-4;
+	}
+	.provider {
+		max-width: calc(20% - 13px);
+	}
+	.more {
+		@apply px-10;
+		margin-top: 18px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.more {
+		@apply py-2.5 px-8;
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 800px) {
+	.heading {
+		@apply mb-5;
+	}
+	.list {
+		@apply scrollbar-x pb-4;
+	}
+	.more {
+		@apply py-2.5 px-8;
+		margin-top: 5px;
+	}
+}
+
+@media (max-width: 440px) {
+	.heading {
+		@apply mb-4;
+	}
+}

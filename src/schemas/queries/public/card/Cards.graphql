@@ -1,0 +1,16 @@
+query Cards($query: QueryFullestInput!) {
+	cards(query: $query) {
+		cards {
+			about
+			imagePath
+			color
+			backgroundColor
+			provider {
+				profile {
+					login
+					avatarPath
+				}
+			}
+		}
+	}
+}

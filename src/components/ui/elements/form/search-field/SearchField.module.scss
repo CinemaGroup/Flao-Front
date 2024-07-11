@@ -1,0 +1,63 @@
+.search {
+	@apply flex items-center justify-between rounded-lg green-border gap-8 py-1 pl-3.5 pr-1;
+}
+.input {
+	@apply w-full text-medium-xl text-gray-500 font-medium;
+}
+.button {
+	@apply btn-green h-full py-2.5 px-3.5 text-2lg flex items-center gap-1.5 font-semibold rounded-lg;
+
+	> svg {
+		@apply w-5 h-5;
+	}
+}
+
+@media (max-width: 1600px) {
+	.button {
+		@apply text-lg;
+
+		> svg {
+			width: 19px;
+			height: 19px;
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.input {
+		font-size: 13px;
+	}
+	.button {
+		@apply py-2 text-medium-xl;
+	}
+}
+
+@media (max-width: 1200px) {
+	.search {
+		@apply py-0 pl-3.5 pr-0;
+	}
+	.button {
+		@apply rounded-tr-md rounded-br-md rounded-tl-none rounded-bl-none px-3;
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.input,
+	.button {
+		@apply text-medium-lg;
+	}
+	.button > svg {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+@media (max-width: 550px) {
+	.button > span {
+		@apply hidden;
+	}
+	.search {
+		@apply gap-5;
+	}
+}

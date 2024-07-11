@@ -1,0 +1,25 @@
+query Products($query: QueryProductInput!) {
+	products(query: $query) {
+		products {
+			id
+			name
+			coverPath
+			fixedPrice
+			minPrice
+			maxPrice
+			priceType
+			isHot
+			category {
+				name
+				slug
+			}
+			provider {
+				profile {
+					login
+					avatarPath
+				}
+			}
+		}
+		count
+	}
+}

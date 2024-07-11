@@ -1,0 +1,58 @@
+.categories,
+.popularCategories,
+.products {
+	@apply mb-8;
+}
+.providers {
+	@apply mb-12;
+}
+.info {
+	@apply mb-11;
+}
+
+@media (max-width: 1100px) {
+	.categories,
+	.popularCategories,
+	.products {
+		@apply mb-7;
+	}
+	.providers,
+	.info {
+		@apply mb-10;
+	}
+}
+
+@media (max-width: 700px) {
+	.categories,
+	.popularCategories,
+	.products {
+		@apply mb-6;
+	}
+	.providers,
+	.info {
+		@apply mb-8;
+	}
+}
+
+@media (max-width: 550px) {
+	.categories,
+	.popularCategories,
+	.products {
+		@apply mb-5;
+	}
+	.providers,
+	.info {
+		@apply mb-6;
+	}
+}
+
+@media (max-width: 440px) {
+	.categories,
+	.popularCategories,
+	.products {
+		@apply mb-4;
+	}
+	.providers {
+		@apply mb-5;
+	}
+}

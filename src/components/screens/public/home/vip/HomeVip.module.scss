@@ -1,0 +1,282 @@
+.section {
+	@apply mb-6;
+}
+.wrapper,
+.fill,
+.products,
+.box {
+	@apply flex;
+	gap: 22px;
+}
+.wrapper {
+	@apply flex-col;
+}
+.fill {
+	@apply w-full items-start;
+}
+.bigAdd {
+	height: 100px;
+}
+.smallAdd {
+	height: 135px;
+}
+.sellerAdd {
+	@apply w-full h-full;
+	min-width: calc(100% - 850px);
+	max-width: calc(100% - 850px);
+	min-height: 535px;
+	max-height: 535px;
+}
+.box {
+	@apply flex-col w-full overflow-hidden;
+	min-width: 828px;
+	max-width: 828px;
+}
+.products {
+	@apply pb-2.5 scrollbar-x;
+}
+.product {
+	max-width: calc(100% / 3 - 15px);
+	min-width: calc(100% / 3 - 15px);
+
+	> div:first-child {
+		@apply aspect-square;
+	}
+}
+
+@media (max-width: 1600px) {
+	.smallAdd {
+		height: 125px;
+	}
+	.sellerAdd {
+		min-height: 526px;
+		max-height: 526px;
+	}
+}
+
+@media (max-width: 1400px) {
+	.sellerAdd {
+		min-height: 490px;
+		max-height: 490px;
+		min-width: calc(100% - 772px);
+		max-width: calc(100% - 772px);
+	}
+	.box {
+		min-width: 750px;
+		max-width: 750px;
+	}
+	.bigAdd {
+		height: 90px;
+	}
+	.smallAdd {
+		height: 120px;
+	}
+}
+
+@media (max-width: 1300px) {
+	.smallAdd {
+		height: 110px;
+	}
+	.sellerAdd {
+		min-height: 463px;
+		max-height: 463px;
+		min-width: calc(100% - 722px);
+		max-width: calc(100% - 722px);
+	}
+	.box {
+		min-width: 700px;
+		max-width: 700px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.smallAdd {
+		height: 100px;
+	}
+	.sellerAdd {
+		min-height: 426px;
+		max-height: 426px;
+		min-width: calc(100% - 642px);
+		max-width: calc(100% - 642px);
+	}
+	.box {
+		min-width: 620px;
+		max-width: 620px;
+	}
+	.bigAdd {
+		height: 80px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.wrapper,
+	.fill,
+	.products,
+	.box {
+		@apply gap-4;
+	}
+	.sellerAdd {
+		min-height: 465px;
+		max-height: 465px;
+		min-width: calc(100% - 532px);
+		max-width: calc(100% - 532px);
+	}
+	.box {
+		min-width: 510px;
+		max-width: 510px;
+	}
+	.product {
+		min-width: calc(50% - 8px);
+		max-width: calc(50% - 8px);
+	}
+	.smallAdd {
+		height: 90px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.product {
+		@apply rounded-lg;
+	}
+	.sellerAdd {
+		min-height: 425px;
+		max-height: 425px;
+		min-width: calc(100% - 472px);
+		max-width: calc(100% - 472px);
+	}
+	.box {
+		min-width: 450px;
+		max-width: 450px;
+	}
+	.smallAdd {
+		height: 80px;
+	}
+}
+
+@media (max-width: 900px) {
+	.bigAdd {
+		height: 75px;
+	}
+	.sellerAdd {
+		min-height: 390px;
+		max-height: 390px;
+		min-width: calc(100% - 422px);
+		max-width: calc(100% - 422px);
+	}
+	.box {
+		min-width: 400px;
+		max-width: 400px;
+	}
+	.smallAdd {
+		height: 70px;
+	}
+}
+
+@media (max-width: 800px) {
+	.section {
+		@apply mb-4;
+	}
+	.sellerAdd {
+		min-height: 238px;
+		max-height: 238px;
+		min-width: calc(100% - 422px);
+		max-width: calc(100% - 422px);
+	}
+	.box {
+		min-width: 400px;
+		max-width: 400px;
+	}
+	.product {
+		@apply min-w-full max-w-full;
+
+		> div:first-child {
+			@apply min-h-full max-h-full;
+			min-width: 140px;
+			max-width: 140px;
+			min-height: 140px;
+			max-height: 140px;
+		}
+
+		> div:last-child {
+			@apply flex justify-center flex-col py-1 px-2.5;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.sellerAdd {
+		min-height: 230px;
+		max-height: 230px;
+		min-width: 230px;
+		max-width: 230px;
+	}
+	.box {
+		@apply w-full;
+		min-width: auto;
+		max-width: none;
+	}
+	.smallAdd {
+		height: 62px;
+	}
+}
+
+@media (max-width: 650px) {
+	.bigAdd {
+		height: 70px;
+	}
+}
+
+@media (max-width: 600px) {
+	.sellerAdd {
+		min-height: 222px;
+		max-height: 222px;
+		min-width: 200px;
+		max-width: 200px;
+	}
+	.box {
+		@apply w-full;
+	}
+	.smallAdd {
+		height: 58px;
+	}
+	.wrapper,
+	.fill,
+	.products,
+	.box {
+		gap: 12px;
+	}
+}
+
+@media (max-width: 550px) {
+	.section {
+		@apply mb-2;
+	}
+	.bigAdd {
+		height: 65px;
+	}
+	.smallAdd {
+		@apply hidden;
+	}
+	.sellerAdd {
+		min-height: 152px;
+		max-height: 152px;
+		min-width: 152px;
+		max-width: 152px;
+	}
+}
+
+@media (max-width: 500px) {
+	.bigAdd {
+		height: 60px;
+	}
+	.sellerAdd {
+		min-height: 152px;
+		max-height: 152px;
+		min-width: 142px;
+		max-width: 142px;
+	}
+	.product {
+		min-width: 270px;
+		max-width: 270px;
+	}
+}
