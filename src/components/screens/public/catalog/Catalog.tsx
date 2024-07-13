@@ -1,10 +1,11 @@
 import Categories from '@/components/blocks/categories/Categories'
+import type { IPageSearchParam } from '@/shared/interfaces/param/param.interface'
 import type { FC } from 'react'
 import { HOME_CATEGORIES_DATA } from '../home/data/categories.data'
 import styles from './Catalog.module.scss'
 import CatalogProducts from './products/CatalogProducts'
 
-const Catalog: FC = () => {
+const Catalog: FC<IPageSearchParam> = ({ searchParams }) => {
 	return (
 		<>
 			<Categories
@@ -14,7 +15,7 @@ const Catalog: FC = () => {
 				variant="circle"
 				hasHeading={false}
 			/>
-			<CatalogProducts />
+			<CatalogProducts searchParams={searchParams} />
 		</>
 	)
 }

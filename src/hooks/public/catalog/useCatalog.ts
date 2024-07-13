@@ -1,15 +1,15 @@
 import type { IPaginationQuery } from '@/shared/interfaces/pagination/pagination.interface'
-import { useRouter, useSearchParams } from 'next/navigation'
+import type { IPageSearchParam } from '@/shared/interfaces/param/param.interface'
+import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
-export const useCatalog = () => {
+export const useCatalog = ({ searchParams }: IPageSearchParam) => {
 	const step = 4
 	const { push } = useRouter()
-	const searchParams = useSearchParams()
 
 	const [query, setQuery] = useState<IPaginationQuery>({
-		page: (+(searchParams.get('page') || 1) - 1) * step + 1,
-		perPage: +(searchParams.get('perPage') || 25),
+		page: (+(searchParams?.page || 1) - 1) * step + 1,
+		perPage: +(searchParams?.perPage || 25),
 	})
 
 	const displayPage = Math.floor((query.page - 1) / step) + 1
@@ -41,7 +41,7 @@ export const useCatalog = () => {
 	}, [query.page])
 
 	const updateUrlParameters = (newPage: number) => {
-		const params = new URLSearchParams(searchParams.toString())
+		const params = new URLSearchParams(searchParams?.toString())
 		const displayPage = Math.floor((newPage - 1) / step) + 1
 		params.set('page', String(displayPage))
 		push('?' + params.toString())
@@ -112,7 +112,6 @@ export const useCatalog = () => {
 		step,
 		startIndex,
 		endIndex,
-		searchParams,
 		query,
 		goTo,
 		goToPrev,

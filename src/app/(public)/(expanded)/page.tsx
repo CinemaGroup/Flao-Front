@@ -2,8 +2,8 @@ import Home from '@/components/screens/public/home/Home'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-	title: 'Home',
-	description: 'Home',
+	title: '',
+	description: '',
 }
 
 export default function HomePage() {
