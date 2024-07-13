@@ -1,5 +1,6 @@
 import { PriceType } from '@/__generated__/output'
 import fireIcon from '@/assets/images/icons/fire.png'
+import moreIcon from '@/assets/images/icons/more.png'
 import rubleBlackIcon from '@/assets/images/icons/ruble-black.png'
 import rubleGreenIcon from '@/assets/images/icons/ruble-green.png'
 import StaticImage from '@/components/ui/common/image/StaticImage'
@@ -7,7 +8,7 @@ import { PUBLIC_PAGES } from '@/constants/url.constants'
 import type { IProduct } from '@/shared/interfaces/product/product.interface'
 import { priceFormat } from '@/utils/formats/price-format.util'
 import cn from 'clsx'
-import { Info, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 import Link from 'next/link'
 import type { FC } from 'react'
 import styles from './Product.module.scss'
@@ -75,7 +76,11 @@ const Product: FC<IProduct> = ({ product, className }) => {
 						<span className={styles.login}>
 							{product.provider.profile.login}
 						</span>
-						<Info className={styles.about} />
+						<StaticImage
+							src={moreIcon.src}
+							alt="Больше"
+							className={styles.about}
+						/>
 					</Link>
 				</div>
 				<div className={styles.rating}>

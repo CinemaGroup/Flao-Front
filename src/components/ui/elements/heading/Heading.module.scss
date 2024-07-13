@@ -1,9 +1,12 @@
 .heading {
-	@apply flex items-center gap-3;
+	@apply flex items-center gap-3 uppercase;
 }
 .title,
 .button {
-	@apply whitespace-nowrap uppercase;
+	@apply whitespace-nowrap;
+}
+.title {
+	@apply uppercase;
 }
 .title {
 	@apply text-4lg;
@@ -15,6 +18,10 @@
 .line {
 	@apply inline-block w-full bg-gray-300;
 	height: 1px;
+}
+.label {
+	@apply bg-gray-base rounded-full text-white text-small font-medium;
+	padding: 5px 10px;
 }
 
 @media (max-width: 1400px) {
@@ -35,9 +42,15 @@
 	}
 }
 
+@media (max-width: 1000px) {
+	.label {
+		font-size: 9px;
+	}
+}
+
 @media (max-width: 800px) {
 	.title {
-		font-size: 21px;
+		@apply text-3lg;
 	}
 	.button {
 		@apply text-medium-lg;
@@ -52,8 +65,9 @@
 		@apply w-full;
 	}
 	.title {
-		@apply text-3lg w-full ellipse-text;
-		max-width: calc(100% - 108px);
+		@apply w-full ellipse-text;
+		font-size: 17px;
+		max-width: calc(100% - 140px);
 	}
 	.button {
 		font-size: 11px;
@@ -62,10 +76,9 @@
 
 @media (max-width: 440px) {
 	.title {
-		font-size: 17px;
+		@apply text-small py-2 px-3 rounded-full bg-green-base text-center text-white max-w-full font-bold;
 	}
 	.button {
-		@apply px-2.5;
-		font-size: 9px;
+		@apply hidden;
 	}
 }

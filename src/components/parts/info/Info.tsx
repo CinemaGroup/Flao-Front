@@ -32,9 +32,11 @@ const Info: FC<IInfo> = ({ info, className }) => {
 							})}
 							dangerouslySetInnerHTML={{ __html: info.content }}
 						/>
-						<div className={cn(styles.gradient, {
+						<div
+							className={cn(styles.gradient, {
 								[styles.visible]: isShow,
-							})} />
+							})}
+						/>
 					</div>
 					<button
 						className={cn(styles.toggle, {
@@ -42,7 +44,7 @@ const Info: FC<IInfo> = ({ info, className }) => {
 						})}
 						onClick={() => setIsShow(!isShow)}
 					>
-						Раскрыть полностью
+						{isShow ? 'Скрыть' : 'Раскрыть полностью'}
 						<ChevronDown />
 					</button>
 				</Wrapper>

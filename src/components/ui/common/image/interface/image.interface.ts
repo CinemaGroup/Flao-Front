@@ -3,6 +3,7 @@ import type { IClassName } from '@/shared/interfaces/class-name/class-name.inter
 interface IImageProperties extends IClassName {
 	quality?: number
 	src: string
+	srcSet?: string
 	alt: string
 	priority?: boolean
 }

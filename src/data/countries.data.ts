@@ -1,4 +1,4 @@
-export const EXPANDED_HEADER_COUNTRIES: string[] = [
+export const COUNTRIES_DATA: string[] = [
 	'Санкт-Петербург',
 	'Новосибирск',
 	'Екатеринбург',

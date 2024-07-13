@@ -1,14 +1,14 @@
 .advertising {
 	@apply w-full rounded-xl brightness-hover relative;
 
-	> img {
+	img {
 		@apply w-full h-full image-like-bg-cover absolute left-0 top-0 right-0 bottom-0 rounded-xl;
 	}
 }
 
 @media (max-width: 1000px) {
 	.advertising,
-	.advertising > img {
-		@apply rounded-lg;
+	.advertising img {
+		@apply rounded-2lg;
 	}
 }

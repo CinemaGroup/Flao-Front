@@ -1,19 +1,22 @@
+import loginIcon from '@/assets/images/icons/login.png'
+import mapIcon from '@/assets/images/icons/map.png'
+import StaticImage from '@/components/ui/common/image/StaticImage'
 import { PUBLIC_PAGES } from '@/constants/url.constants'
-import { ChevronDown, LogIn, MapPin } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import type { FC } from 'react'
 import styles from '../ExpandedHeader.module.scss'
-import { EXPANDED_HEADER_COUNTRIES } from '../data/expanded-header-buttons.data'
+import { COUNTRIES_DATA } from '@/data/countries.data'
 
 const ExpandedHeaderButtons: FC = () => {
 	return (
 		<ul className={styles.list}>
 			<li className={styles.item}>
-				<MapPin />
+				<StaticImage src={mapIcon.src} alt="Карта" />
 				Москва
 				<ChevronDown />
 				<ul className={styles.countries}>
-					{EXPANDED_HEADER_COUNTRIES.map((country) => (
+					{COUNTRIES_DATA.map((country) => (
 						<li className={styles.country} key={country}>
 							<Link href="/">{country}</Link>
 						</li>
@@ -22,7 +25,7 @@ const ExpandedHeaderButtons: FC = () => {
 			</li>
 			<li className={styles.item}>
 				<Link className={styles.login} href={PUBLIC_PAGES.LOGIN}>
-					<LogIn />
+					<StaticImage src={loginIcon.src} alt="Войти" />
 					Войти
 				</Link>
 			</li>

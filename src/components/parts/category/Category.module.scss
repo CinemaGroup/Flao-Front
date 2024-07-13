@@ -90,4 +90,23 @@
 	.category.card .name {
 		font-size: 10px;
 	}
+
+	.category.card .name {
+		max-width: 115px;
+	}
+}
+
+@media (max-width: 500px) {
+	.category.circle .name,
+	.category.card .name {
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 420px) {
+	.category.category.card .name {
+		min-height: 21px;
+		max-height: 21px;
+		line-height: 21px;
+	}
 }

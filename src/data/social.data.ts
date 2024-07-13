@@ -1,6 +1,6 @@
-import instagram from '@/assets/images/icons/instagram.png'
+import telegram from '@/assets/images/icons/telegram.png'
 import vk from '@/assets/images/icons/vk.png'
-import { INSTAGRAM_URL, VK_URL } from '@/constants/details.constants'
+import { TELEGRAM_URL, VK_URL } from '@/constants/details.constants'
 import type { IListItem } from '@/shared/interfaces/list/list.interface'
 
 export const SOCIAL_DATA: IListItem[] = [
@@ -10,8 +10,8 @@ export const SOCIAL_DATA: IListItem[] = [
 		href: VK_URL,
 	},
 	{
-		icon: instagram.src,
-		alt: 'Instagram',
-		href: INSTAGRAM_URL,
+		icon: telegram.src,
+		alt: 'Телеграм',
+		href: TELEGRAM_URL,
 	},
 ]

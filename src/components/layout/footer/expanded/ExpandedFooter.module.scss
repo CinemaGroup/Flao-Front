@@ -41,19 +41,19 @@
 	}
 }
 
-@media(max-width: 1600px) {
+@media (max-width: 1600px) {
 	.footer {
 		padding-bottom: 60px;
 	}
 }
 
-@media(max-width: 1400px) {
+@media (max-width: 1400px) {
 	.footer {
 		padding-bottom: 45px;
 	}
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
 	.footer {
 		@apply pb-7;
 	}
@@ -134,8 +134,19 @@
 	}
 }
 
-@media(max-width: 400px) {
+@media (max-width: 420px) {
 	.wrapper {
-		@apply p-6;
+		@apply p-5;
+	}
+	.copyright {
+		@apply text-medium-lg;
+	}
+	.slogan,
+	.menu,
+	.info {
+		@apply text-small;
+	}
+	.social img {
+		@apply min-w-6 max-w-6 min-h-6 max-h-6;
 	}
 }

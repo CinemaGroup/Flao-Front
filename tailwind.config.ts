@@ -234,6 +234,7 @@ const config: Config = {
 						scrollbarWidth: 'thin',
 
 						'&::-webkit-scrollbar': {
+							'-webkit-appearance': 'none',
 							height: '5px',
 							borderRadius: '50%',
 						},
@@ -260,6 +261,7 @@ const config: Config = {
 						scrollbarWidth: 'thin',
 
 						'&::-webkit-scrollbar': {
+							'-webkit-appearance': 'none',
 							width: '5px',
 							borderRadius: '50%',
 						},

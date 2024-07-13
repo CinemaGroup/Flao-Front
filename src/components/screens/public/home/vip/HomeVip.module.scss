@@ -176,45 +176,28 @@
 	.section {
 		@apply mb-4;
 	}
-	.sellerAdd {
-		min-height: 238px;
-		max-height: 238px;
-		min-width: calc(100% - 422px);
-		max-width: calc(100% - 422px);
+	.fill {
+		@apply flex-col;
 	}
 	.box {
-		min-width: 400px;
-		max-width: 400px;
+		@apply min-w-full max-w-full;
+	}
+	.smallAdd {
+		@apply hidden;
+	}
+	.sellerAdd {
+		@apply min-w-full max-w-full;
+		aspect-ratio: 4.06 / 1;
+		max-height: none;
+		min-height: auto;
 	}
 	.product {
-		@apply min-w-full max-w-full;
-
-		> div:first-child {
-			@apply min-h-full max-h-full;
-			min-width: 140px;
-			max-width: 140px;
-			min-height: 140px;
-			max-height: 140px;
-		}
-
-		> div:last-child {
-			@apply flex justify-center flex-col py-1 px-2.5;
-		}
+		min-width: calc(100% / 3 - 11px);
+		max-width: calc(100% / 3 - 11px);
 	}
 }
 
 @media (max-width: 700px) {
-	.sellerAdd {
-		min-height: 230px;
-		max-height: 230px;
-		min-width: 230px;
-		max-width: 230px;
-	}
-	.box {
-		@apply w-full;
-		min-width: auto;
-		max-width: none;
-	}
 	.smallAdd {
 		height: 62px;
 	}
@@ -222,20 +205,11 @@
 
 @media (max-width: 650px) {
 	.bigAdd {
-		height: 70px;
+		height: 65px;
 	}
 }
 
 @media (max-width: 600px) {
-	.sellerAdd {
-		min-height: 222px;
-		max-height: 222px;
-		min-width: 200px;
-		max-width: 200px;
-	}
-	.box {
-		@apply w-full;
-	}
 	.smallAdd {
 		height: 58px;
 	}
@@ -252,31 +226,39 @@
 		@apply mb-2;
 	}
 	.bigAdd {
-		height: 65px;
+		height: 50px;
 	}
 	.smallAdd {
 		@apply hidden;
 	}
-	.sellerAdd {
-		min-height: 152px;
-		max-height: 152px;
-		min-width: 152px;
-		max-width: 152px;
+	.product {
+		min-width: calc(50% - 6px);
+		max-width: calc(50% - 6px);
 	}
 }
 
 @media (max-width: 500px) {
 	.bigAdd {
-		height: 60px;
+		height: 45px;
 	}
-	.sellerAdd {
-		min-height: 152px;
-		max-height: 152px;
-		min-width: 142px;
-		max-width: 142px;
+}
+
+@media (max-width: 420px) {
+	.section {
+		@apply mb-1;
+	}
+	.wrapper {
+		gap: 5px;
+	}
+	.fill,
+	.products {
+		@apply gap-2.5;
 	}
 	.product {
-		min-width: 270px;
-		max-width: 270px;
+		min-width: calc(50% - 5px);
+		max-width: calc(50% - 5px);
+	}
+	.bigAdd {
+		height: 40px;
 	}
 }

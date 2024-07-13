@@ -28,8 +28,15 @@ const Home: FC = () => {
 			/>
 			<Products
 				className={styles.products}
+				smallProductClassName={styles.product}
 				products={HOME_PRODUCTS_DATA.products}
 				count={HOME_PRODUCTS_DATA.count}
+				heading={{
+					children: 'Новинки каталога',
+					button: { label: 'показать все', href: '' },
+					hasLine: false,
+				}}
+				hasLink
 			/>
 			<HomeAdvertisements advertisements={HOME_ADVERTISEMENTS_DATA} />
 			<Categories

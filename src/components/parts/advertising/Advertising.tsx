@@ -12,11 +12,29 @@ const Advertising: FC<IAdvertising> = ({ advertising, className }) => {
 			className={cn(styles.advertising, className && className)}
 			href={advertising.link}
 		>
-			<StaticImage src={advertising.imagePath} alt={advertising.alt} />
+			<picture draggable={false}>
+				{advertising.imageSetPath && (
+					<source
+						draggable={false}
+						media={`(max-width: ${advertising.responsive || 800}px)`}
+						srcSet={advertising.imageSetPath}
+					/>
+				)}
+				<StaticImage src={advertising.imagePath} alt={advertising.alt} />
+			</picture>
 		</Link>
 	) : (
 		<Wrapper className={cn(styles.advertising, className && className)}>
-			<StaticImage src={advertising.imagePath} alt={advertising.alt} />
+			<picture draggable={false}>
+				{advertising.imageSetPath && (
+					<source
+						draggable={false}
+						media="(max-width: 800px)"
+						srcSet={advertising.imageSetPath}
+					/>
+				)}
+				<StaticImage src={advertising.imagePath} alt={advertising.alt} />
+			</picture>
 		</Wrapper>
 	)
 }

@@ -9,6 +9,12 @@
 .info {
 	@apply mb-11;
 }
+.product {
+	&:nth-last-child(1),
+	&:nth-last-child(2) {
+		@apply hidden;
+	}
+}
 
 @media (max-width: 1100px) {
 	.categories,

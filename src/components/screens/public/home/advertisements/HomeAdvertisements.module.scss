@@ -15,16 +15,16 @@
 		@apply mb-7;
 	}
 	.adds {
-		@apply gap-4 justify-center;
+		@apply gap-4;
 	}
 	.add {
-		max-width: 380px;
+		max-width: calc(100% / 3 - 11px);
 	}
 }
 
 @media (max-width: 850px) {
 	.add {
-		max-width: 340px;
+		max-width: calc(50% - 8px);
 	}
 }
 
@@ -42,18 +42,18 @@
 
 @media (max-width: 550px) {
 	.add {
-		max-width: 320px;
+		@apply max-w-full;
 	}
 }
 
 @media (max-width: 550px) {
 	.section {
-		@apply mb-5;
+		@apply mb-8;
 	}
 }
 
 @media (max-width: 440px) {
 	.section {
-		@apply mb-4;
+		@apply mb-9;
 	}
 }

@@ -115,7 +115,40 @@
 }
 
 @media (max-width: 550px) {
+	.provider {
+		max-width: calc(50% - 5px);
+		min-width: calc(50% - 5px);
+	}
+	.category,
+	.rating {
+		font-size: 8px;
+	}
+	.rating > svg {
+		@apply w-3 h-3;
+	}
 	.button {
+		max-width: 115px;
 		font-size: 10px;
+	}
+}
+
+@media (max-width: 500px) {
+	.button {
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 420px) {
+	.button {
+		font-size: 8px;
+		min-height: 21px;
+		max-height: 21px;
+		line-height: 21px;
+	}
+	.category {
+		@apply py-0.5 px-1;
+	}
+	.rating > svg {
+		@apply w-2.5 h-2.5;
 	}
 }

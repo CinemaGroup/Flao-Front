@@ -10,4 +10,5 @@ export interface IHeading extends IClassName {
 	variant: TypeHeadingVariant
 	hasLine?: boolean
 	button?: IHeadingButton
+	label?: string
 }

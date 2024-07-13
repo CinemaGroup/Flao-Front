@@ -9,11 +9,12 @@ const Heading: FC<PropsWithChildren<IHeading>> = ({
 	variant,
 	hasLine,
 	button,
+	label,
 	className,
 }) => {
 	const HeadingTag = variant
 
-	if (!hasLine || !button) {
+	if (!hasLine && !button && !label) {
 		return (
 			<HeadingTag className={cn(styles.title, className && className)}>
 				{children}
@@ -30,6 +31,7 @@ const Heading: FC<PropsWithChildren<IHeading>> = ({
 				</Link>
 			)}
 			{hasLine && <span className={styles.line}></span>}
+			{label && <span className={styles.label}>{label}</span>}
 		</div>
 	)
 }

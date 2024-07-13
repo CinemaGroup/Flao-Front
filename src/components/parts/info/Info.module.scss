@@ -78,27 +78,37 @@
 @media (max-width: 550px) {
 	.heading {
 		@apply mb-2;
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.toggle {
-		@apply text-medium-xl mt-2;
+		@apply text-medium-lg mt-2;
+
+		> svg {
+			width: 18px;
+			height: 18px;
+			stroke-width: 1.4px;
+		}
 	}
 	.content {
-		@apply text-medium-lg;
+		@apply text-small;
 		max-height: 90px;
 	}
 }
 
 @media (max-width: 440px) {
 	.heading {
-		font-size: 17px;
+		@apply mb-1.5;
+		font-size: 13px;
 	}
 	.toggle {
-		@apply my-1.5;
-		font-size: 12px;
+		@apply mt-1.5 text-small;
+
+		> svg {
+			@apply w-3.5 h-3.5;
+			stroke-width: 1.8px;
+		}
 	}
 	.content {
-		@apply text-medium;
-		max-height: 83px;
+		max-height: 73px;
 	}
 }

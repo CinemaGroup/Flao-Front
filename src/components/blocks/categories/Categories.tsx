@@ -1,7 +1,9 @@
 'use client'
 
+import gridIcon from '@/assets/images/icons/grid-green.png'
 import Category from '@/components/parts/category/Category'
 import Container from '@/components/ui/common/container/Container'
+import StaticImage from '@/components/ui/common/image/StaticImage'
 import Section from '@/components/ui/common/section/Section'
 import Wrapper from '@/components/ui/common/wrapper/Wrapper'
 import Heading from '@/components/ui/elements/heading/Heading'
@@ -27,7 +29,7 @@ const Categories: FC<ICategories> = ({
 	return (
 		<Section className={className && className}>
 			<Container>
-				<Wrapper>
+				<Wrapper className={styles.wrapper}>
 					{hasHeading && (
 						<Heading
 							className={styles.heading}
@@ -38,34 +40,47 @@ const Categories: FC<ICategories> = ({
 							популярные категории
 						</Heading>
 					)}
-					<ul
-						className={cn(
-							styles.list,
-							isCard ? styles.cardList : styles.circleList
-						)}
-					>
-						{categories.map((category) => (
-							<Category
-								key={category.slug}
-								className={isCard ? styles.card : styles.circle}
-								variant={variant}
-								category={category}
-							/>
-						))}
-						{!isCard && (
-							<li className={styles.circle}>
+					<div className={styles.fill}>
+						<ul
+							className={cn(
+								styles.list,
+								isCard ? styles.cardList : styles.circleList
+							)}
+						>
+							{categories.map((category) => (
+								<Category
+									key={category.slug}
+									className={isCard ? styles.card : styles.circle}
+									variant={variant}
+									category={category}
+								/>
+							))}
+							{!isCard && (
+								<li className={styles.circle}>
+									<Link
+										className={styles.link}
+										href={PUBLIC_PAGES.ALL_CATEGORIES}
+									>
+										<div className={styles.preview}>
+											<LayoutGrid />
+										</div>
+										<span className={styles.name}>Все категории</span>
+									</Link>
+								</li>
+							)}
+						</ul>
+						{isCard && (
+							<div className={styles.more}>
 								<Link
 									className={styles.link}
 									href={PUBLIC_PAGES.ALL_CATEGORIES}
 								>
-									<div className={styles.preview}>
-										<LayoutGrid />
-									</div>
-									<span className={styles.name}>Все категории</span>
+									<StaticImage src={gridIcon.src} alt="Каталог" />
+									<span>ПОСМОТРЕТЬ <br /> ВСЕ</span>
 								</Link>
-							</li>
+							</div>
 						)}
-					</ul>
+					</div>
 				</Wrapper>
 			</Container>
 		</Section>

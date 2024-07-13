@@ -5,6 +5,7 @@ const StaticImage: FC<IStaticImage> = ({
 	quality = 100,
 	priority = false,
 	src,
+	srcSet,
 	alt,
 	width,
 	height,
@@ -16,6 +17,7 @@ const StaticImage: FC<IStaticImage> = ({
 			width={width}
 			height={height}
 			src={src}
+			srcSet={srcSet}
 			alt={alt}
 			className={className && className}
 		/>

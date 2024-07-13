@@ -46,6 +46,11 @@
 		animation: pulse 1s infinite;
 		will-change: top, right, left, bottom, opacity;
 	}
+
+	> img {
+		max-width: 65%;
+		max-height: 65%;
+	}
 }
 .box {
 	@apply mt-1.5 flex flex-col items-start;
@@ -118,7 +123,7 @@
 	}
 }
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
 	.price {
 		font-size: 19px;
 	}
@@ -129,11 +134,14 @@
 }
 
 @media (max-width: 800px) {
-	.top {
-		@apply flex-col items-start left-3 top-3 bottom-3 right-3;
-	}
 	.category {
-		@apply mt-auto;
+		font-size: 9px;
+	}
+	.best {
+		@apply min-h-6 max-h-6 min-w-6 max-w-6;
+	}
+	.top {
+		@apply left-3 top-3 right-3;
 	}
 	.price {
 		font-size: 18px;
@@ -149,20 +157,25 @@
 	.product,
 	.thumbnail,
 	.thumbnail > img {
-		@apply rounded-lg;
-	}
-	.product {
-		@apply flex border border-solid border-gray-300;
-	}
-	.box {
-		@apply w-full overflow-hidden mt-0;
-	}
-	.info {
-		@apply flex-col items-start;
+		@apply rounded-2lg;
 	}
 }
 
 @media (max-width: 700px) {
+	.rating > svg {
+		@apply w-4 h-4;
+	}
+	.label {
+		@apply hidden;
+	}
+	.count,
+	.rate,
+	.login {
+		font-size: 9px;
+	}
+	.category {
+		font-size: 8px;
+	}
 	.price {
 		font-size: 17px;
 
@@ -170,6 +183,23 @@
 			width: 17px;
 			height: 17px;
 		}
+	}
+	.name {
+		@apply text-medium;
+	}
+}
+
+@media (max-width: 600px) {
+	.count,
+	.rate,
+	.login {
+		font-size: 8px;
+	}
+	.category {
+		font-size: 7px;
+	}
+	.best {
+		@apply min-h-5 max-h-5 min-w-5 max-w-5;
 	}
 	.name {
 		@apply text-medium;
@@ -185,6 +215,21 @@
 		}
 	}
 	.name {
-		@apply text-medium;
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 420px) {
+	.provider > img:last-child {
+		min-width: 8px;
+		max-width: 8px;
+		min-height: 8px;
+		max-height: 8px;
+	}
+	.name {
+		font-size: 9px;
+	}
+	.category {
+		@apply px-1 py-0.5;
 	}
 }
